@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PlanoEdu - Detalhes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      background-color: #000000;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .logo {
+     height: 55px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+  
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background-color: #f4f4f4;
+      border-right: 2px solid #ddd;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar.hidden {
+      transform: translateX(-100%);
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #1e3678;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin: 10px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar li:hover {
+      background: #e0e0e0;
+    }
+    
+    .content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+      
+    }
+
+    .toggle-btn {
+      background: #ff914d;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .content img#toggle-btn{
+      fill:#e0e0e0;
+      width: 20px;
+      height: 20px;
+    }
+
+    iframe {
+      border: none;
+      width: 50%;
+      height: 400px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="index.html"><img src="https://i.imgur.com/8wdi9k0.png" alt="Logo" class="logo"></a>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <aside class="sidebar" id="sidebar">
+      <h2>Conteúdos</h2>
+      <ul>
+        <li onclick="carregarConteudo('algebra')">Expressóes algebricos</li>
+        <li onclick="carregarConteudo('funcoes')">Funções</li>
+        <li onclick="carregarConteudo('derivadas')">Derivadas</li>
+        <li onclick="carregarConteudo('integrais')">Integrais</li>
+        <li><a href="plano.html">Voltar</a></li>
+      </ul>
+    </aside>
+
+    <div class="content">
+      <button class="toggle-btn" onclick="toggleSidebar()"><img id="toggle-btn" src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png"></button>
+      <div id="conteudo-area">
+        <h2>Bem-vindo ao seu plano de estudos 🎓</h2>
+        <p>Selecione um conteúdo no menu à esquerda para começar.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("hidden");
+    }
+
+    function carregarConteudo(topico) {
+      const area = document.getElementById("conteudo-area");
+      let html = "";
+
+      if (topico === "algebra") {
+        html = `
+          <h2>Expressões algebricas</h2>
+          <p>Introdução às equações, inequações e polinômios.</p>
+          <iframe src="https://www.youtube.com/embed/8NNA-8rimNs" allowfullscreen></iframe>
+        `;
+      } else if (topico === "funcoes") {
+        html = `
+          <h2>Funções</h2>
+          <p>Estudo das principais funções matemáticas: afim, quadrática e exponencial.</p>
+          <iframe src="https://www.youtube.com/embed/UompImyqT3I" allowfullscreen></iframe>
+        `;
+      } else if (topico === "derivadas") {
+        html = `
+          <h2>Derivadas</h2>
+          <p>Regras básicas de derivação e aplicações.</p>
+          <iframe src="https://www.youtube.com/embed/cWBEMN75IMc" allowfullscreen></iframe>
+        `;
+      } else if (topico === "integrais") {
+        html = `
+          <h2>Integrais</h2>
+          <p>Definição e aplicações de integrais definidas e indefinidas.</p>
+          <iframe src="https://www.youtube.com/embed/2IrLIAhyEZw" allowfullscreen></iframe>
+        `;
+      }
+
+      area.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
