@@ -1,6 +1,6 @@
 # PlanEdu
 
-## Projeto escolar buscando criando um plano de estudos personalizado baseado na sua preferência
-## Para usá-lo totalmente é necessário XAMPP ativado com Apache e Mysql
+##### Utilizar com XAMPP (Apache e MySQL) - em desenvolvimento
 
-### Em desenvolvimento 
+Projeto escolar para a criação de planos de estudos personalizados
+
