@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <head>
   <meta charset="UTF-8">
-  <title>Conteúdos</title>
+  <title>PlanoEdu - Detalhes</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -12,12 +11,24 @@
       height: 100vh;
       margin: 0;
     }
+
+    header {
+      background-color: #000000;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .logo {
+     height: 55px;
+    }
+
     .main-content {
       flex: 1;
       display: flex;
       overflow: hidden;
     }
   
+    /* Sidebar */
     .sidebar {
       width: 260px;
       background-color: #f4f4f4;
@@ -50,8 +61,7 @@
     }
 
     .sidebar li:hover {
-      background: #f8ca0f;
-      transition-delay: 50ms;
+      background: #e0e0e0;
     }
     
     .content {
@@ -87,28 +97,24 @@
 </head>
 <body>
   <header>
-    <div class="header-box">
-      <button class="home" onclick="window.location.href='index.html'">
-        <img src="https://i.imgur.com/8wdi9k0.png" alt="Logo" class="logo">
-      </button>
+    <div class="header-left">
+      <a href="index.html"><img src="https://i.imgur.com/8wdi9k0.png" alt="Logo" class="logo"></a>
+    </div>
   </header>
 
   <div class="main-content">
     <aside class="sidebar" id="sidebar">
       <h2>Conteúdos</h2>
       <ul>
-        <li onclick="carregarConteudo('algebra')">Expressóes algebricos</li>
-        <li onclick="carregarConteudo('funcoes')">Funções</li>
-        <li onclick="carregarConteudo('derivadas')">Derivadas</li>
-        <li onclick="carregarConteudo('integrais')">Integrais</li>
-        <li onclick="window.location.href='plano.html'">Voltar</a></li>
+        <li onclick="carregarConteudo('Geometria')">Geometria</li>
+        <li><a href="plano.html">Voltar</a></li>
       </ul>
     </aside>
 
     <div class="content">
       <button class="toggle-btn" onclick="toggleSidebar()"><img id="toggle-btn" src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png"></button>
       <div id="conteudo-area">
-        <h2>Plano de Estudos</h2>
+        <h2>Bem-vindo ao seu plano de estudos 🎓</h2>
         <p>Selecione um conteúdo no menu à esquerda para começar.</p>
       </div>
     </div>
@@ -123,29 +129,11 @@
       const area = document.getElementById("conteudo-area");
       let html = "";
 
-      if (topico === "algebra") {
+      if (topico === "Geometria") {
         html = `
-          <h2>Expressões algebricas</h2>
-          <p>Introdução às equações, inequações e polinômios.</p>
-          <iframe src="https://www.youtube.com/embed/8NNA-8rimNs" allowfullscreen></iframe>
-        `;
-      } else if (topico === "funcoes") {
-        html = `
-          <h2>Funções</h2>
-          <p>Estudo das principais funções matemáticas: afim, quadrática e exponencial.</p>
-          <iframe src="https://www.youtube.com/embed/UompImyqT3I" allowfullscreen></iframe>
-        `;
-      } else if (topico === "derivadas") {
-        html = `
-          <h2>Derivadas</h2>
-          <p>Regras básicas de derivação e aplicações.</p>
-          <iframe src="https://www.youtube.com/embed/cWBEMN75IMc" allowfullscreen></iframe>
-        `;
-      } else if (topico === "integrais") {
-        html = `
-          <h2>Integrais</h2>
-          <p>Definição e aplicações de integrais definidas e indefinidas.</p>
-          <iframe src="https://www.youtube.com/embed/2IrLIAhyEZw" allowfullscreen></iframe>
+          <h2>Geometria</h2>
+          <p>A geometria é um ramo da matemática preocupado com questões de forma, tamanho e posição relativa de figuras e com as propriedades dos espaços. </p>
+          <iframe src="https://www.youtube.com/embed/vqlr5igkB-o" allowfullscreen></iframe>
         `;
       }
 
