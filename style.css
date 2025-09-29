@@ -21,7 +21,7 @@ body {
 }
 
 header {
-  background-color: #000000;
+  background-color: #1e3678;
   padding: 10px 20px;
   color: white;
 }
@@ -54,12 +54,12 @@ header {
 
 .actions button:hover {
   background-color: white;
-  color: black;
+  color: #f48112;
   transition: 0.5s;
 }
 
 main .content {
-  color: black;
+  color: white;
   padding: 20px;
   text-align: center;
   font-size: 30px;
@@ -84,8 +84,8 @@ main .content {
    transform: scale(1.2);
 }
 #first-block {
-  height: 100vh;
-  background-color: white;
+  height: 92vh;
+  background-color: #398be2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@ main .content {
 
 .plano-container select,
 .plano-container input[type="text"] {
-  color: #0e121c;
+  color: #0044ff;
   font-size: 20px;
   width: 100%;
   padding: 10px;
@@ -223,15 +223,6 @@ main .content {
 .dia.selecionado {
   background-color: #ff914d;
   color: white;
-}
-
-.horarios input[type="time"] {
-  color: #c9c500;
-  font-size: 20px;
-  padding: 8px;
-  margin: 5px;
-  border-radius: 8px;
-  border: 2px solid #c9c500;
 }
 
 .end-create{
@@ -290,25 +281,6 @@ a:visited{
   color: #1e3678;
   cursor: pointer;
 }
-
-.biblioteca {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.livro {
-  width: 200px;
-  text-align: left;
-  font: bold;
-}
-
-.livro img {
-  width: 100%;
-  height: autdddddo;
-  border-radius: 10px;
-}
-
 .fade-out {
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -317,8 +289,4 @@ a:visited{
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.6s ease forwards;
-}
-
-.etapamerda {
-  margin-bottom: 30px;
 }
