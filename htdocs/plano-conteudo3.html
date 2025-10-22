@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <title>Conteúdos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    .main-content {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+  
+    .sidebar {
+      width: 260px;
+      background-color: #f4f4f4;
+      border-right: 2px solid #ddd;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar.hidden {
+      transform: translateX(-100%);
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #1e3678;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin: 10px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar li:hover {
+      background: #f8ca0f;
+      transition-delay: 50ms;
+    }
+    
+    .content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+      
+    }
+
+    .toggle-btn {
+      background: #ff914d;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .content img#toggle-btn{
+      fill:#e0e0e0;
+      width: 20px;
+      height: 20px;
+    }
+
+    iframe {
+      border: none;
+      width: 50%;
+      height: 400px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-box">
+      <button class="home" onclick="window.location.href='index.html'">
+        <img src="https://i.imgur.com/8wdi9k0.png" alt="Logo" class="logo">
+      </button>
+  </header>
+
+  <div class="main-content">
+    <aside class="sidebar" id="sidebar">
+      <h2>Conteúdos</h2>
+      <ul>
+        <li onclick="carregarConteudo('Fisica Mecanica')">Física Mecanica</li>
+        <li onclick="window.location.href='plano.html'">Voltar</a></li>
+      </ul>
+    </aside>
+
+    <div class="content">
+      <button class="toggle-btn" onclick="toggleSidebar()"><img id="toggle-btn" src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png"></button>
+      <div id="conteudo-area">
+        <h2>Plano de Estudos</h2>
+        <p>Selecione um conteúdo no menu à esquerda para começar.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("hidden");
+    }
+
+    function carregarConteudo(topico) {
+      const area = document.getElementById("conteudo-area");
+      let html = "";
+
+      if (topico === "Fisica Mecanica") {
+        html = `
+        <h2>Fisica Mecanica</h2>
+        <p>A mecânica é a área da física que estuda o movimento de corpos materiais.<br>   Por meio de investigação científica, relaciona a energia com forças e movimentos presentes na natureza.</p>
+        <iframe src="https://www.youtube.com/embed/LokkRcNzMww" allowfullscreen></iframe>
+        `;
+      }  
+      area.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

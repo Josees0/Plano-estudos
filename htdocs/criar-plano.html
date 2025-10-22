@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+<script src="renderer.js"></script>
+<script src="main.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Criar Plano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-box">
+      <button class="home" onclick="window.location.href='index.html'">
+        <img src="https://i.imgur.com/8wdi9k0.png" alt="Logo" class="logo">
+      </button>
+    </div>
+  </header>
+
+  <main class="plano-container">
+    <h1>Criar plano de estudos</h1>
+
+    <div id="etapa1" class="etapa">
+      <label for="choose">Escolha a instituição:</label>
+        <select id="instituicao" onchange="mostrarEtapa('etapa2')">
+          <option value="">-- Selecione --</option>
+          <option value="utfpr">UTFPR</option>
+          <option value="ufrj">UFRJ</option>
+          <option value="usp">USP</option>
+          <option value="unifesp">UNIFESP</option>
+        </select>
+    </div>
+
+    <div id="etapa2" class="etapa" style="display:none">
+      <label for="curso">Escolha o curso:</label>
+        <select id="curso" onchange="mostrarEtapa('etapa3')">
+          <option value="">-- Escolha a instituição primeiro --</option>
+      </select>
+    </div>
+
+    <div id="etapa3" class="etapa" style="display:none">
+      <p><strong>Preferências:</strong></p>
+      <div class="dias-da-semana">
+        <p>Quais dias deseja estudar?</p>
+        <div class="dias-container">
+          <div class="dia" data-dia="dom">Dom</div>
+          <div class="dia" data-dia="seg">Seg</div>
+          <div class="dia" data-dia="ter">Ter</div>
+          <div class="dia" data-dia="qua">Qua</div>
+          <div class="dia" data-dia="qui">Qui</div>
+          <div class="dia" data-dia="sex">Sex</div>
+          <div class="dia" data-dia="sab">Sáb</div>
+        </div>
+      </div>
+
+    <div id="etapa4" class="etapa" style="display:none">
+      <button class="end-create" onclick="animateAndRedirect2()">Concluir</button>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.dia').forEach(dia => {
+      dia.addEventListener('click', () => {
+        dia.classList.toggle('selecionado');
+        mostrarEtapa('etapa4');
+      });
+    });
+  </script>
+</body>
+</html>
