@@ -1,6 +1,6 @@
 # PlanEdu Inc
 
-Organizado ~ <a target="blank_" href="https://www.infinityfree.com/">Infinityfree</a> | Promovido pelo <a href="">Lucas Vaz</a> <!-- Esperando permissão para inserir instagram -->
+Organizado ~ <a target="_blank" href="https://www.infinityfree.com/">Infinityfree</a> | Promovido pelo <a href="">Lucas Vaz</a> <!-- Esperando permissão para inserir instagram -->
 
 ##### Em desenvolvimento — Testado com XAMPP (Apache e MySQL)
 
