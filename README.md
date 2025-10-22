@@ -1,9 +1,15 @@
-# PlanEdu
+# PlanEdu Inc
 
-Organizado ~ <a href="https://www.infinityfree.com/">Infinityfree</a> | <a href="https://www.instagram.com/lucasfelipevaz/">Lucas Vaz</a>
+Organizado com <a href="https://www.infinityfree.com/">Infinityfree</a> | Promovido pelo <a href="https://www.instagram.com/lucasfelipevaz/">Lucas Vaz</a>
 
-##### Utilizado para testes XAMPP (Apache e MySQL) - em desenvolvimento
+##### Em desenvolvimento — Testado com XAMPP (Apache e MySQL)
 
 
-Projeto escolar para a criação de planos de estudos personalizados
+Projeto escolar para o curso técnico de cooperativismo Senai
 
+<h4>Tem como objetivo:</h4>
+
+- Auxiliar nos estudos de forma organizada e funcional.
+- Oferecer disponibilidade integral a preferência do aluno.
+- Fornecer materiais de qualidade, como vídeos, simulados, livros acadêmicos, resumos...
+- Melhorar o desempenho do aluno para a entrada de vestibulares e concursos.
