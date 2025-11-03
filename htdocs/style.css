@@ -290,3 +290,75 @@ a:visited{
   opacity: 0;
   animation: fadeIn 0.6s ease forwards;
 }
+@media (min-width: 768px) and (max-width:1024px){
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px;
+  }
+
+  header {
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .header-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .actions button,
+  .mid-button{
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  main .content {
+    font-size: 22px;
+    margin-top: -100px;
+    padding: 15px;
+  }
+
+  .cards-container {
+    display: flex;
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .info-card,
+  .card-aula {
+    width: 100%;
+    padding: 25px;
+    font-size: 18px;
+  }
+
+  .info-card h2,
+  .info-card h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 18px;
+  }
+
+  .plano-container {
+    padding: 20px;
+    font-size: 20
+        
+  .end-create button{
+    font-size: 20px;
+    padding: 10px 20px;
+    left: 5%;
+  }
+}
+
+}

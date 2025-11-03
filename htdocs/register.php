@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
     <div class="cards-container">
     <div class="info-card">
     <h2>PÁGINA DE REGISTRO</h2>
-    <h3>*Código obrigatório para registro*</h1>
+    <h3>*Código obrigatório para registro*</h3>
     <form action="" method="POST">
         <p>
             <label>Usuário</label>
@@ -81,6 +81,6 @@ if (isset($_POST['submit'])) {
         <p3>Já tem uma conta? <a href="login.php">Logar</a></p3>
     </form>
   </div>
-    
+ </div>  
 </body>
 </html>

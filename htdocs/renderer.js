@@ -107,17 +107,17 @@ function animateAndRedirect3() {
   document.body.classList.add('fade-out');
   setTimeout(() => {
     window.location.href = "register.php";
-  }, 150);
+  }, 300);
 }
 function animateAndRedirect4() {
   document.body.classList.add('fade-out');
   setTimeout(() => {
     window.location.href = "register2.php";
-  }, 150);
+  }, 300);
 }
 function animateAndRedirect5() {
   document.body.classList.add('fade-out');
   setTimeout(() => {
     window.location.href = "login.php";
-  }, 150);
+  }, 300);
 }
